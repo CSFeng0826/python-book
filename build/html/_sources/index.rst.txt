@@ -3,17 +3,10 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Python 入門教程
-====================================
-.. note::
-
-    在這篇入門教程中，提供了 Python 程式語言的教學，如有錯誤歡迎指教及交流！
-
+歡迎來到 Python 基本教程!
+=======================================
 目錄:
-
 .. toctree::
-    :maxdepth: 2
-    :glob:
+   :maxdepth: 2
 
-    base/index
-    intro/index
+   python_intro
