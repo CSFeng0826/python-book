@@ -15,5 +15,5 @@ Python 入門教程
     :maxdepth: 2
     :glob:
 
-    base/index
     intro/index
+    base/index
