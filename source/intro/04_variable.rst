@@ -258,7 +258,7 @@ Set (集合) 為 Python 中一個無序且內容不重複的序列，主要功�
 
 由於集合本身為不重複的元素序列，因此重複的元素會被自動去掉，以上範例程式輸出結果如下：
 
-. code-block:: console
+.. code-block:: console
 
     {'Mary', 'Jim', 'Rose', 'Jack', 'Tom'}
 
