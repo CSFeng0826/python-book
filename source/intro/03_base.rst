@@ -56,9 +56,9 @@ Python 與其他語言最大的不同在於，Python 的程式區塊不是使用
 
 執行以上的程式碼會出現以下錯誤訊息:
 
-.. code-block:: console
+.. code-block:: bash
 
-    python test_indentation.py
+    & python test_indentation.py
 
 多行語法
 ------------------------------------------
