@@ -1,5 +1,6 @@
 Python 基礎語法
 ====================================
+
 Python 識別字
 ------------------------------------------
 
@@ -92,6 +93,33 @@ Python 引號
     str2 = "This is string"
     str3 = """ Hello World!
     This is example."""
+
+Print 輸出
+------------------------------------------
+
+在 Python 中可以使用 ``print()`` 進行字串的輸出，``print()`` 默認的輸出是換行的，如以下程式範例：
+
+.. code-block:: python
+
+    str1 = 'word 1'
+    str2 = """Hello World!
+    This is example."""
+    number1 = 10
+
+    print(str1)
+    print(str2)
+    print(number1)
+
+以上程式範例的輸出結果為：
+
+.. code-block:: console
+
+    word 1
+    Hello World!
+    This is example.
+    10
+
+``print()`` 還有許多應用方式，詳細應用可以參考後續章節。
 
 Python 註解
 ------------------------------------------
