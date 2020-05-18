@@ -58,7 +58,7 @@ Python 與其他語言最大的不同在於，Python 的程式區塊不是使用
 
 .. code-block:: console
 
-    python ./test.py
+    python test.py
 
 多行語法
 ------------------------------------------
