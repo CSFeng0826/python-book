@@ -58,7 +58,7 @@ Python 與其他語言最大的不同在於，Python 的程式區塊不是使用
 
 .. code-block:: bash
 
-    & python test_indentation.py
+    & python intro/test_indentation.py
 
 多行語法
 ------------------------------------------
