@@ -38,6 +38,28 @@ Python 保留字
 
 縮排以及空格
 ------------------------------------------
+
+Python 與其他語言最大的不同在於，Python 的程式區塊不是使用 `{}` 來控制，而是使用縮排。
+
+縮排的空格是可變的，但是在程式碼中所有的縮排空格數量必須相同，如下面程式範例，否則會引發錯誤。
+
+.. code-block:: python
+
+    if True:
+        print("True")
+    else:
+        print("False")
+
+若縮排空格數量異常，會引發 `IndentationError` 例外，如下面程式碼範例:
+
+.. execute_code:: python
+    :emphasize-lines: 2
+
+    if True:
+       print("True")
+    else:
+        print("False")    
+
 多行語法
 ------------------------------------------
 Python 引號
