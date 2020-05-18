@@ -50,15 +50,19 @@ Python 與其他語言最大的不同在於，Python 的程式區塊不是使用
     :emphasize-lines: 2
 
     if True:
-       print("True")
+    print("True")
     else:
         print("False")
 
 執行以上的程式碼會出現以下錯誤訊息:
 
-.. code-block:: bash
+.. code-block:: console
 
-    & python intro/test_indentation.py
+    $ python test_indentation.py
+      File "test_indentation.py", line 2
+        print("True")
+            ^
+    IndentationError: expected an indented block 
 
 多行語法
 ------------------------------------------
