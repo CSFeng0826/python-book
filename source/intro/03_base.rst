@@ -2,13 +2,17 @@ Python 基礎語法
 ====================================
 Python 識別字
 
-在 Python 中，識別字是由英文字母(a-z, A-Z)、數字(0-9)以及底線(_)所組成的。
+在 Python 中，識別字是由英文字母 (a-z, A-Z)、數字 (0-9) 以及底線 (_) 所組成的。
 
 所有的識別字都可以包刮英文字母、數字以及底線，但不能以數字回開頭。
 .. code-block:: python
-   :emphasize-lines: 11
+   :emphasize-lines: 3,5
 
-   a1, a_1, var1 ......
+   def some_function():
+       interesting = False
+       print 'This line is highlighted.'
+       print 'This one is not...'
+       print '...but this one is.'
 ------------------------------------------
 Python 關鍵字
 ------------------------------------------
