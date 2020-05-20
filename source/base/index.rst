@@ -9,11 +9,11 @@ Python 語言與 Perl，C 和 Java 等語言有許多相似之處。但是，也
     :maxdepth: 2
     :numbered: 2
 
-    01_condition
-    02_roop
-    03_while
-    04_for
-    05_break
-    06_continue
-    07_pass
-    08_string
+    01_string
+    02_list
+    03_tuple
+    04_set
+    05_condition
+    06_loop
+    07_function
+    08_IO
