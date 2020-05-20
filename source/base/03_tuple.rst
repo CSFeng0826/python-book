@@ -1,34 +1,35 @@
 Python 元組
 ====================================
+T
+uple (元組) 與串列非常相似，不同之處在於元組的元素不能修改。元組的宣告方式為 ``小括號()`` ，元素之間用逗號隔開。
 
-Python 的元組與串列類似，不同之處在於元組的元素不能修改，元組使用小括號，串列使用中括號。
-
-元組創建很簡單，只需要在括號中添加元素，並使用逗號隔開即可。
-
-元組中只包含一個元素時，需要在元素後面添加逗號，否則括號會被當作運算符使用。
-
-如以下程式範例：
+元組中的元素類型也可以不相同，如以下範例程式：
 
 .. code-block:: python
-    
-    tuple1 = ('Google', 'Runoob', 1997, 2000)
-    tuple2 = "a", "b", "c", "d"
-    tuple3 = ()
-    tuple4 = (50,)
 
-    print(tuple1)
-    print(tuple2)
-    print(tuple3)
-    print(tuple4) 
+    tuple1 = ('abcd', 786, 2.23, 'runoob', 70.2)
+    print (tuple) #輸出完整元組
+    print (tuple[0]) #輸出元組的第一個元素
+    print (tuple[1:3]) #輸出從第二個元素開始到第三個元素
+    print (tuple[2:]) #輸出從第三個元素開始的所有元素
 
-以上的輸出結果如下：
+以上範例程式輸出結果如下：
 
 .. code-block:: console
 
-    ('Google', 'Runoob', 1997, 2000)
-    ('a', 'b', 'c', 'd')
-    ()
-    (50,)
+    ('abcd', 786, 2.23, 'runoob', 70.2)
+    abcd
+    (786, 2.23)
+    (2.23, 'runoob', 70.2)
+
+雖然元組的元素不可改變，但它可以包含可變的對象，比如 ``list (串列)`` 。
+
+構造包含 0 個或 1 個元素的元組比較特殊，所以有一些額外的語法規則：
+
+.. code-block:: python
+
+    tup1 = () # 空元組
+    tup2 = (20,) # 一個元素，需要在元素後添加逗號
 
 修改元組
 -----------------------------------------
@@ -64,7 +65,7 @@ Python 的元組與串列類似，不同之處在於元組的元素不能修改�
     print(tuple1) 
 
     del tuple1 
-    print("刪除後的元組tup:") 
+    print("刪除後的元組tuple:") 
     print(tuple1)
 
 以上的輸出結果如下：
@@ -72,7 +73,8 @@ Python 的元組與串列類似，不同之處在於元組的元素不能修改�
 .. code-block:: console
 
     ('Google', 'Runoob', 1997, 2000)
-    刪除後的元組tup:
+    刪除後的元組tuple:
+    
     Traceback (most recent call last)
     <ipython-input-40-32585f2b89c6> in <module>
         4 del tuple1

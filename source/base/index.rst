@@ -12,8 +12,9 @@ Python 語言與 Perl，C 和 Java 等語言有許多相似之處。但是，也
     01_string
     02_list
     03_tuple
-    04_set
-    05_condition
-    06_loop
-    07_function
-    08_IO
+    04_dictionary
+    05_set
+    06_condition
+    07_loop
+    08_function
+    09_IO
