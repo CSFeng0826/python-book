@@ -6,7 +6,7 @@ Python 條件語法是通過一條或多條語法的執行結果（``True`` 或�
 可以通過下圖來簡單了解條件語法的執行過程:
 
 ..  image:: ../pic/condition.png
-    :align: right
+    :align: center
 
 if 語法
 -----------------------------------------
@@ -103,3 +103,32 @@ Python 中用 ``elif`` 代替了 ``else if``，所以 ``if`` 語句的關鍵字�
     Enter x number: 10
     Enter y number: 5
     10 > 5
+
+巢狀 if
+-----------------------------------------
+
+在巢狀 ``if`` 語法中，可以把 ``if...elif...else`` 結構放在另外一個 ``if...elif...else`` 結構中。
+
+以下為應用操作運算符的範例：
+
+.. code-block:: python
+
+    num = int(input("輸入一個數字：")) 
+
+    if num % 2 == 0 :
+        if num % 3 == 0 :
+            print("你輸入的數字可以整除 2 和 3")
+        else :
+            print("你輸入的數字可以整除 2，但不能整除 3") 
+    else :
+        if num % 3 == 0 :
+            print("你輸入的數字可以整除 3，但不能整除 2") 
+        else :
+            print("你輸入的數字不能整除 2 和 3")
+
+以上範例程式輸出結果如下：
+
+.. code-block:: console
+
+    輸入一個數字：6
+    你輸入的數字可以整除 2 和 3
