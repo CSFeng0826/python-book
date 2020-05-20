@@ -206,7 +206,7 @@ Python語言支持以下類型的運算符:
 
 Python 中有以下幾個邏輯運算符
 
-- ``and``： ``x and y``，如果 ``x`` 為 ``False``，``x and y`` 返回 ``False``，否則它返回 ``y `` 的值
+- ``and``： ``x and y``，如果 ``x`` 為 ``False``，``x and y`` 返回 ``False``，否則它返回 ``y`` 的值
 - ``or``：``x or y``，如果 ``x`` 是 ``True``，它返回 ``x`` 的值，否則它返回 ``y`` 的值
 - ``not``：``not x``，如果 ``x`` 為 ``True``，返回 ``False`` 。如果 ``x`` 為 ``False``，它返回 ``True``
 
