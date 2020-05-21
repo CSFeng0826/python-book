@@ -112,3 +112,243 @@ while...else 循環語法
     3 大於 5
     4 大於 5
     5 大於或等於 5
+
+for 語法
+-----------------------------------------
+
+Python ``for`` 語法可以遍歷任何序列的項目，如一個串列或者一個字串。
+
+``for`` 循環的一般格式如下：
+
+.. code-block:: console
+
+    for 變數 in 序列:
+        程式碼區塊
+    else:
+        程式碼區塊
+
+執行流程圖如下：
+
+..  image:: ../pic/for.png
+    :align: center
+
+以一個簡單的例子實作 for 語法：
+
+.. code-block:: python
+
+    languages = ["C", "C++", "Perl", "Python"] 
+    for x in languages:
+        print (x)
+
+以上範例程式輸出結果如下：
+
+.. code-block:: console
+
+    C
+    C++
+    Perl
+    Python
+
+range()函數
+-----------------------------------------
+
+如果需要遍歷數字序列，可以使用 Python 內建的 ``range()`` 函數。它會生成數列，例如：
+
+. code-block:: python
+
+    for i in range(5):
+        print(i)
+
+以上範例程式輸出結果如下：
+
+.. code-block:: console
+
+    0
+    1
+    2
+    3
+    4
+
+也可以使用 ``range()`` 指定區間的值，產生由起始直到 ``結束值-1`` 的數列
+
+. code-block:: python
+
+    for i in range(5,9) :
+        print(i)
+
+以上範例程式輸出結果如下：
+
+.. code-block:: console
+
+    5
+    6
+    7
+    8
+
+``range()`` 還能指定不同的步長來產生數列
+
+. code-block:: python
+
+    for i in range(0, 10, 3) :
+        print(i)
+
+以上範例程式輸出結果如下：
+
+.. code-block:: console
+
+    0
+    3
+    6
+    9
+
+len() 與 range() 函數
+-----------------------------------------
+
+在 Python 中常以 ``range()`` 和 ``len()`` 函數的結合來遍歷一個序列的元素：
+
+如以下程式範例：
+
+.. code-block:: python
+    
+    a = ['Google', 'Baidu', 'Runoob', 'Taobao', 'QQ']
+    for i in range(len(a)):
+        print(i, a[i]) 
+
+以上的輸出結果如下：
+
+.. code-block:: console
+
+    0 Google
+    1 Baidu
+    2 Runoob
+    3 Taobao
+    4 QQ
+
+break
+-----------------------------------------
+
+``break`` 語法可以跳出 ``for`` 和 ``while`` 的循環體。如果從 ``for`` 或 ``while`` 循環中終止，任何對應的循環 ``else`` 將不執行
+
+流程圖如下：
+
+..  image:: ../pic/break.png
+    :align: center
+
+以下為 ``while`` 與 ``break`` 的範例程式：
+
+.. code-block:: python
+    
+    n = 5
+    while n > 0:
+        n -= 1
+        if n == 2:
+            break
+        print(n)
+    print('Exit') 
+
+以上的輸出結果如下：
+
+.. code-block:: console
+
+    4
+    3
+    Exit
+
+以下為 ``for`` 與 ``break`` 的範例程式：
+
+.. code-block:: python
+    
+    for i in range(0, 5):
+        if i == 3:
+            break
+        print(i)
+    print('Exit')
+
+以上的輸出結果如下：
+
+.. code-block:: console
+
+    0
+    1
+    2
+    Exit
+
+continue
+-----------------------------------------
+
+``continue`` 語法被用來告訴 Python 跳過當前循環塊中的剩餘程式碼，然後繼續進行下一輪循環。
+
+流程圖如下：
+
+..  image:: ../pic/continue.png
+    :align: center
+
+以下為 ``while`` 與 ``break`` 的範例程式：
+
+.. code-block:: python
+    
+    n = 5
+    while n > 0:
+        n -= 1
+        if n == 2:
+            continue
+        print(n)
+    print('Exit')  
+
+以上的輸出結果如下：
+
+.. code-block:: console
+
+    4
+    3
+    1
+    0
+    Exit
+
+以下為 ``for`` 與 ``break`` 的範例程式：
+
+.. code-block:: python
+    
+    for i in range(0, 5):
+        if i == 3:
+            continue
+        print(i)
+    print('Exit')
+
+以上的輸出結果如下：
+
+.. code-block:: console
+
+    0
+    1
+    2
+    4
+    Exit
+
+pass
+-----------------------------------------
+
+Python 中 ``pass`` 是空語法，是為了保持程序結構的完整性。
+
+``pass`` 不做任何事情，一般用做佔位語法，如以下程式範例：
+
+.. code-block:: python
+    
+    for letter in 'Google': 
+        if letter == 'o':
+            pass
+            print ('pass')
+        print ('Char :', letter)
+
+以上的輸出結果如下：
+
+.. code-block:: console
+
+    Char : G
+    pass
+    Char : o
+    pass
+    Char : o
+    Char : g
+    Char : l
+    Char : e
