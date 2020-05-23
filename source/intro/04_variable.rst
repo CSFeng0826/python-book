@@ -221,3 +221,120 @@ Python 數據類型轉換
 +-----------+----------------------------------------------------------------------------------------------------------------------------------+
 |oct()      |oct() function takes an integer number and returns its octal representation.                                                      |
 +-----------+----------------------------------------------------------------------------------------------------------------------------------+
+
+Q&A
+------------------------------------
+
+int()
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+``int()`` 函數用於將一個字串轉換為整數，如以下程式範例：
+
+.. code-block:: python
+    
+    a = '10'
+    b = int(a)
+
+    print(type(a))
+    print(type(b))
+
+以上的輸出結果如下：
+
+.. code-block:: console
+    
+    <class 'str'>
+    <class 'int'>
+
+float()
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+``float()`` 函數用於將一個字串轉換為浮點數，如以下程式範例：
+
+.. code-block:: python
+    
+    a = '10.5'
+    b = float(a)
+
+    print(type(a))
+    print(type(b))
+
+以上的輸出結果如下：
+
+.. code-block:: console
+    
+    <class 'str'>
+    <class 'float'>
+
+object cannot be interpreted as an integer
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+資料型態無法作為 ``int`` 使用，可能為型態錯誤或者不同型態運算實引發的錯誤，如以下程式範例：
+
+.. code-block:: python
+    :emphasize-lines: 2
+
+    batch = 200 
+    for x in range(len(order_nos) / batch + 1):
+        # do something
+
+在第二行中的 ``len(order_nos) / batch + 1``，由於 ``len(order_nos) / batch`` 計算後的型態為 ``float``，但後面與 ``int`` 做運算，因此引發型態錯誤。
+
+請使用 ``int()`` 轉換型態，更改為以下程式：
+
+.. code-block:: python
+    :emphasize-lines: 2
+
+    batch = 200 
+    for x in range(int(len(order_nos) / batch) + 1):
+        # do something
+
+invalid literal for int() with base NUMBER
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+當使用 int 對一個字串類型的數據進行數據轉換時，字串類型的內容只能為整數，不能為符點數，如以下程式範例：
+
+.. code-block:: python
+    
+    int('10.5')
+
+會引發下列錯誤：
+
+.. code-block:: console
+    
+    ValueError: invalid literal for int() with base 10: '1.5'
+
+請更改程式為：
+
+.. code-block:: python
+    
+    # 先轉換為浮點數
+    int(float('10.5'))
+
+    # 或字串直接為整數
+    int('10')
+
+can't multiply sequence by non-int of type
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+數字之間的運算必須都為數字型態，如以下程式範例：
+
+.. code-block:: python
+    
+    a = 10
+    b = 5
+    c = a * b
+
+若資料型態為序列則需要以迭代的方式進行運算，如以下程式範例：
+
+.. code-block:: python
+    
+    a = [10, 3, 5, 3, 1]
+
+    c = []
+    for num in a:
+        c.append(10 * num)
+
+ZeroDivisionError
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+被除數為 ``0`` 會引發 ``ZeroDivisionError``，必須檢查被除數的數值。

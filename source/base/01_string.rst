@@ -64,6 +64,24 @@ String 字串
 
     Hello I am john.
 
+replace()
+-----------------------------------------
+
+在 Python 中字串提供一個 ``replace()`` 方法，可以替換字串中的元素，把字符串中的欲替換的字串替换成新字串，如果指定第三個参数則為替換次數，範例程式如下：
+
+.. code-block:: python
+    
+    str1 = "That is example, that is example, that is example.";
+    print(str1.replace("is", "was"))
+    print(str1.replace("is", "was", 1))
+
+以上的輸出結果如下：
+
+.. code-block:: console
+
+    That was example, that was example, that was example.
+    That was example, that is example, that is example.
+
 轉義字元
 -----------------------------------------
 
@@ -228,3 +246,58 @@ Unicode 字串
 在 Python2 中，普通字串是以 8 位 ASCII 碼進行存儲的，而 Unicode 字串則存儲為 16 位 Unicode 字串，這樣能夠表示更多的字符集。使用的語法是在字符串前面加上前綴 ``u``。
 
 在 Python3 中，所有的字串都是 Unicode 字串。
+
+Q&A
+-----------------------------------------
+
+must be string
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+在這個錯誤當中，通常是資料型態應更改為 string 格式，可以使用 ``str()`` 函數進行轉換。
+
+.. code-block:: python
+
+    num = 10.5
+    print(type(num))
+    str1 = str(num)
+    print(type(str1))
+
+以上的輸出結果如下：
+
+.. code-block:: console
+
+    <class 'float'>
+    <class 'str'>
+
+not all arguments converted during string formatting
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+在這個錯誤中，提供的資料數量多於或少於 format 的格式，如以下範例：
+
+.. code-block:: python
+
+    strs=(1,2,3,4)
+    print('strs= %s' % strs)
+
+以上的輸出結果如下：
+
+.. code-block:: console
+
+    >>> print('strs= %s' % strs)
+    Traceback (most recent call last):
+    File "<pyshell#43>", line 2, in <module>
+        print('strs= %s' % strs)
+    TypeError: not all arguments converted during string formatting
+
+應該更改為
+
+.. code-block:: python
+
+    strs=(1,2,3,4)
+    print('strs= %s,%s,%s,%s' % strs)
+
+以上的輸出結果如下：
+
+.. code-block:: console
+
+    1,2,3,4

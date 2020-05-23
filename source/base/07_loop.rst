@@ -154,7 +154,7 @@ range()函數
 
 如果需要遍歷數字序列，可以使用 Python 內建的 ``range()`` 函數。它會生成數列，例如：
 
-. code-block:: python
+.. code-block:: python
 
     for i in range(5):
         print(i)
